@@ -14,7 +14,7 @@ const message2=document.querySelector("#message-2");
 btn[0].addEventListener("click",function(e){
     message1.innerText="Loading.....";
     message2.innerText="";
-    fetch(`http://localhost:3000/weather?address=${input[0].value}`).then((res)=>{
+    fetch(`/weather?address=${input[0].value}`).then((res)=>{
     res.json().then((data)=>{
         if(data.error){
             message1.innerText=data.error;
